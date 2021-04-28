@@ -35,6 +35,6 @@ RUN cd /tmp/extensions && mkdir swoole \
     && docker-php-ext-enable swoole
 
 RUN cd /tmp/extensions && mkdir hprose \
-    && tar -xf hprose-pecl-vanthink.tar -C hprose --strip-components=1 \
+    && tar -xf hprose-pecl-1.8.0.tar.gz -C hprose --strip-components=1 \
     && (cd hprose && phpize && ./configure --enable-hprose=shared && make $mc && make install) \
     && docker-php-ext-enable hprose
