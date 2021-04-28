@@ -1,0 +1,5 @@
+ARG GO_VERSION
+FROM golang:${GO_VERSION}
+
+ENV GOPROXY https://goproxy.cn
+ENV GO111MODULE on
